@@ -1,0 +1,53 @@
+.card {
+    max-width: 260px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.badge-popular {
+    background-color: #F6C768;
+    font-size: 10px;
+    color: black;
+    padding: 3px 10px;
+    border-radius: 25px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.product-name,
+.product-rating,
+.product-price,
+.product-votes,
+.sold-out {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.product-name {
+    text-align: left;
+    font-weight: bold;
+}
+
+.sold-out {
+    color: #ED735D;
+    margin-top: 3px;
+}
+
+.product-rating {
+    margin-top: 3px;
+}
+
+.product-price {
+    background-color: #BEE3CC;
+    color: #111315;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 5px;
+}

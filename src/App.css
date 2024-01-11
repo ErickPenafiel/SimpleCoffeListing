@@ -1,0 +1,92 @@
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
+main {
+  padding: 170px;
+}
+
+.container-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 313px;
+}
+
+.container-image img {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  object-fit: cover;
+}
+
+.container {
+  width: 100%;
+  max-width: 1090px;
+  background-color: #1B1D1F;
+  border-radius: 15px;
+  padding: 70px 50px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  margin: 0;
+}
+
+.vector svg {
+  position: absolute;
+  top: 180px;
+  z-index: 0;
+}
+
+.introduction {
+  position: relative;
+  color: #6F757C;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.buttons button:nth-child(2) {
+  background-color: transparent;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  place-items: center;
+  gap: 30px;
+  padding: 30px;
+}
