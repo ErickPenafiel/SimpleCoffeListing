@@ -10,6 +10,7 @@ p {
 
 main {
   padding: 170px;
+  overflow: hidden;
 }
 
 .container-image {
@@ -31,9 +32,10 @@ main {
 .container {
   width: 100%;
   max-width: 1090px;
-  background-color: #1B1D1F;
+  background-color: hsl(210, 7%, 11%);
   border-radius: 15px;
   padding: 70px 50px;
+  overflow: hidden;
 }
 
 .title {
@@ -48,9 +50,10 @@ main {
 }
 
 .vector svg {
-  position: absolute;
-  top: 180px;
+  position: relative;
   z-index: 0;
+  margin-top: -90px;
+  margin-left: 250px;
 }
 
 .introduction {
@@ -62,6 +65,7 @@ main {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  margin-top: -60px;
 }
 
 .buttons {
@@ -89,4 +93,21 @@ main {
   place-items: center;
   gap: 30px;
   padding: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    padding: 170px 100px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .vector svg {
+    margin-top: -100px;
+    margin-left: 160px;
+  }
+
+  .container {
+    padding: 70px 40px;
+  }
 }

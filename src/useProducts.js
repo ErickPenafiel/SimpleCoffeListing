@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { fetchProducts } from './services/fetchProducts'
 
 export const useProducts = () => {
+  const [loading, setLoading] = useState(true)
   const [data, setData] = useState([])
 
   useEffect(() => {
@@ -11,6 +12,7 @@ export const useProducts = () => {
         originalProducts.current = data
       })
       .catch(error => console.log(error))
+      .finally(() => setLoading(false))
   }, [])
 
   const originalProducts = useRef(null)
@@ -27,5 +29,5 @@ export const useProducts = () => {
     setData(available)
   }
 
-  return { data, setData, originalProducts, viewAll, viewAvailable }
+  return { loading, data, setData, originalProducts, viewAll, viewAvailable }
 }

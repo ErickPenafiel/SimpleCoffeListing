@@ -5,7 +5,7 @@ import { Vector } from './AssetsSvg'
 import { useProducts } from './useProducts'
 
 function App () {
-  const { data, viewAll, viewAvailable } = useProducts()
+  const { loading, data, viewAll, viewAvailable } = useProducts()
 
   return (
     <main style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
@@ -36,7 +36,11 @@ function App () {
           </button>
         </div>
 
-        <ProductList products={data} />
+        {
+          loading
+            ? <p style={{ marginTop: '100px' }}>Loading...</p>
+            : <ProductList products={data} />
+        }
       </div>
     </main>
   )
